@@ -3,7 +3,7 @@
 //Database params
 define('DB_HOST','localhost');
 define('DB_USER','root');
-define('DB_PASS','13032017N&jf');
+define('DB_PASS','');
 define('DB_NAME','mvcframework');
 
 //APPROOT définie le chemin jusqu'au fichier
