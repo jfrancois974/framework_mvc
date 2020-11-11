@@ -1,9 +1,10 @@
 <?php
+require APPROOT . '/views/includes/head.php';
+?>
 
-foreach ($data['users'] as  $user) {
-    echo "Information : ";
-    echo "<br>";
-    echo "Nom : " . $user->user_name ;
-    echo "<br>";
-    echo "Email : " . $user->user_email; ;
-}
+<div id="section-landing">
+    <?php
+    require APPROOT . '/views/includes/navigation.php';
+    ?>
+
+</div>

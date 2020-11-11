@@ -1,6 +1,11 @@
 <?php
 
 
+/**
+ * Class Core
+ * Creates URL & loads core controller
+ * URL FORMAT - /controller/method/params
+ */
 class Core
 {
     /**
@@ -36,8 +41,10 @@ class Core
 
         //Check la 2eme partie de l'url
         if (isset($url[1])){
+            // Check to see if method exists in controller
             if (method_exists($this->currentController, $url[1])){
                 $this->currentMethod = $url[1];
+                // Unset 1 index
                 unset($url[1]);
             }
 
