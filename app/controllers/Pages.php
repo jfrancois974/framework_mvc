@@ -5,15 +5,21 @@ class Pages extends Controller
 {
     public function __construct()
     {
-
+        $this->userModel = $this->model('User');
     }
 
     public function index()
     {
-        $this->view('pages/index');
+        $users = $this->userModel->getUsers();
+        $data = [
+            'users' => $users
+        ];
+
+
+        $this->view('pages/index', $data);
     }
     public function about()
     {
-        echo 'A propos';
+        $this->view('pages/about');
     }
 }
